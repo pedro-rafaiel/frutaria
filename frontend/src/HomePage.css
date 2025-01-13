@@ -1,0 +1,168 @@
+
+  .home-container {
+    background-image: url('./img/frutas.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    filter: blur(0);
+  }
+  
+  
+  .home-content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2.5rem 4rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
+    max-width: 90%;
+  }
+  
+  .home-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #4CAF50;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    animation: slideIn 1s ease-out forwards;
+  }
+  
+  .home-content p {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+    color: #f8f8f8;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    animation: bounceIn 1.5s ease-in-out;
+  }
+  
+  .btn {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #204721, #256927);
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s ease;
+    box-shadow: 0 5px 20px #2b692e;
+  }
+  
+  .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px #3e7541;
+  }
+  
+  .btn span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.4s ease;
+  }
+  
+  .btn:hover:before {
+    left: 100%;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .home-content {
+      padding: 2rem;
+    }
+  
+    .home-content h1 {
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+  
+    .home-content p {
+      font-size: 1.2rem;
+    }
+  
+    .btn {
+      font-size: 1rem;
+      padding: 0.8rem 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home-content h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+  
+    .home-content p {
+      font-size: 1rem;
+    }
+  
+    .home-buttons {
+      gap: 1rem;
+    }
+  
+    .btn {
+      padding: 0.7rem 1rem;
+    }
+  }
+  
